@@ -16,11 +16,21 @@ class MountainsSeeder extends Seeder
     public function run(): void
     {
         DB::table('mountains')->insert([
-            'name'=>'Everest',
-            'height'=>'8202',
-            'belongsToRange'=>'true',
-            'firstClimbDate'=>'1953-05-29',
-            'continent'=>'Asia',
+            [
+                'name'=>'Everest',
+                'height'=>'8802',
+                'belongsToRange'=>'true',
+                'firstClimbDate'=>'1953-05-29',
+                'continent'=>'Asia',
+            ],
+            [
+                'name'=>'K2',
+                'height'=>'8611',
+                'belongsToRange'=>'true',
+                'firstClimbDate'=>'1953-09-19',
+                'continent'=>'Asia',
+            ]
+            
         ]);
     }
 }
