@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\mountains;
+use App\Models\Mountains;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -15,6 +15,8 @@ class MountainsSeeder extends Seeder
      */
     public function run(): void
     {
+        Mountains::factory()->count(10)->make();
+        /*
         DB::table('mountains')->insert([
             [
                 'name'=>'Everest',
@@ -32,5 +34,6 @@ class MountainsSeeder extends Seeder
             ]
             
         ]);
+        */
     }
 }
